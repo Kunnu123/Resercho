@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chat_incoming"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="8dp">
+
+        <TextView
+            android:id="@+id/msgUname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/textBlack"
+            android:layout_marginTop="6dp"
+            android:textSize="10sp"
+            android:text="Username"/>
+
+        <TextView
+            android:id="@+id/msgContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Message content"
+            android:textColor="@color/textBlack"
+            android:fontFamily="@font/montserrat_regular"/>
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:textColor="@color/textBlack"
+        android:fontFamily="@font/open_sans_light"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+        android:text="12:30PM"/>
+
+    <ImageView
+        android:id="@+id/sending"
+        android:visibility="gone"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:tint="@color/colorWhite"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/ic_access_time_black_24dp"/>
+
+</LinearLayout>

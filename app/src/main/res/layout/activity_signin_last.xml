@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_sign">
+
+    <LinearLayout
+        android:id="@+id/lgPbar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/small_corner_border"
+        android:backgroundTint="@color/colorWhite"
+        android:elevation="12dp">
+
+        <ProgressBar
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="12dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/textGray"
+            android:text="Requesting..."/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:alpha="0.4"
+        android:layout_marginTop="-80dp"
+        android:layout_marginEnd="-100dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/circular_borders"/>
+
+    <ImageView
+        android:id="@+id/hii"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/newpic" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:text="Nice to meet you!"
+        android:textSize="30sp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:layout_margin="26dp"
+        android:fontFamily="@font/roboslab_reg"
+        android:layout_marginTop="?actionBarSize"/>
+
+
+    <LinearLayout
+        android:id="@+id/linearBody"
+        android:layout_width="match_parent"
+        android:background="@drawable/small_corner_border"
+        android:elevation="10dp"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <TextView
+            android:id="@+id/logoSub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginTop="16dp"
+            android:text="Welcome back"
+            android:paddingStart="12dp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="28sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email or Username"
+            android:paddingStart="8dp"
+            android:layout_gravity="start"
+            android:paddingEnd="8dp"
+            android:elevation="1sp"
+            android:paddingBottom="2dp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="12sp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/noto_sans_reg"
+            android:textColor="@color/textLight"/>
+
+        <EditText
+            android:id="@+id/lgEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="16dp"
+            android:layout_marginStart="10dp"
+            android:inputType="textEmailAddress"
+            android:gravity="center_vertical"
+            android:elevation="1dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/textBlack"
+            android:fontFamily="@font/noto_sans_reg"
+            android:textColorHint="@color/colorPrimary"
+            android:backgroundTint="@color/WhiteSmoke"
+            android:background="@drawable/circular_borders"
+            android:hint="yourid@gmail.com or example123"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:elevation="1sp"
+            android:paddingBottom="2dp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="6dp"
+            android:layout_gravity="start"
+            android:layout_marginBottom="4dp"
+            android:textSize="12sp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/noto_sans_reg"
+            android:textColor="@color/textLight"/>
+
+        <EditText
+            android:id="@+id/lgPwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingTop="5dp"
+            android:elevation="1dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="16dp"
+            android:layout_marginStart="10dp"
+            android:inputType="textPassword"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/textBlack"
+            android:fontFamily="@font/noto_sans_reg"
+            android:textColorHint="@color/colorPrimary"
+            android:backgroundTint="@color/WhiteSmoke"
+            android:background="@drawable/circular_borders"
+            android:hint="***********"/>
+
+
+        <TextView
+            android:id="@+id/forgoetPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            android:textColor="@color/grayBgLt"
+            android:alpha="0.8"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="12sp"
+            android:layout_marginTop="20dp" />
+        <TextView
+            android:id="@+id/loginBtn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="3dp"
+            android:background="@drawable/circular_borders_outlined"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Login"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/noto_sans_reg"
+            android:paddingStart="26dp"
+            android:textSize="16sp"
+            android:paddingEnd="26dp"
+            android:paddingTop="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="8dp"/>
+        <ImageView
+            android:id="@+id/closeLogin"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/circular_borders"
+            android:elevation="5dp"
+            android:padding="8dp"
+            android:backgroundTint="@color/WhiteHint"
+            android:tint="@color/WhiteSmokeDark"
+            android:rotation="180"
+            android:src="@drawable/ic_arrow_right"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/loginSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:elevation="3dp"
+        android:background="@drawable/circular_borders"
+        android:backgroundTint="@color/colorWhite"
+        android:gravity="center"
+        android:layout_above="@id/signupBtn"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/alreadymember"
+            android:paddingStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:tint="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/gsigninBtn"
+        android:visibility = "visible"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/circular_borders"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="3dp"
+        android:layout_above="@id/terms"
+        android:paddingStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:paddingEnd="26dp">
+
+        <ImageView
+            android:id="@+id/glogo"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:padding="6dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_google_logo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginStart="16dp"
+            android:text="Continue With Google"/>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/signupform"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/activity_signup"/>
+
+
+    <LinearLayout
+        android:id="@+id/signupBtn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:elevation="3dp"
+        android:background="@drawable/circular_borders"
+        android:backgroundTint="@color/colorWhite"
+        android:gravity="center"
+        android:layout_above="@id/gsigninBtn"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/newhere"
+            android:paddingStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_alignParentEnd="true"
+            android:tint="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/terms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:fontFamily="@font/noto_sans_reg"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorWhite"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:text="By proceeding you accept all the terms, conditions and policies."
+        />
+
+
+</RelativeLayout>

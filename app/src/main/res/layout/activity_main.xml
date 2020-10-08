@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/splash_screen"
+        android:visibility="visible"
+        layout="@layout/layout_splash_screen"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/introViewPager"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/dotsLayout"/>
+
+    <LinearLayout
+        android:id="@+id/dotsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_above="@id/startBtn"
+        android:layout_marginBottom="4dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"/>
+
+    <TextView
+        android:id="@+id/startBtn"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:text="Let's Start"
+        android:textSize="18sp"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        android:elevation="4dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/circular_borders"
+        android:gravity="center"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/textBlack" />
+</RelativeLayout>

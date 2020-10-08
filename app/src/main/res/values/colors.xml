@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8186d5</color>
+    <color name="colorPrimaryDark">#494ca2</color>
+    <color name="colorAccent">#745c97</color>
+
+    <color name="colorPrimaryLight">#b1b6f5</color>
+    <color name="colorPrime">#b22222</color>
+    <color name="colorPrimeDark">#7c0a02</color>
+    <color name="colorAccent2">#e25822</color>
+    <color name="app_color1">#3e206d</color>
+    <color name="app_color2">#916dd5</color>
+    
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorTrans1">#66000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorMagentaPal">#512c96</color>
+    <color name="darkblue">#293462</color>
+    <color name="Red">#f44336</color>
+    <color name="WhiteSmoke">#F5F5F5</color>
+    <color name="WhiteSmokeDark">#D1D1D1</color>
+    <color name="green">#00FF00</color>
+    <color name="redHint">#ffaaaa</color>
+    <color name="greenLime">#ccee77</color>
+    <color name="lightgreen">#90ee90</color>
+    <color name="jungleGreen">#00aa22</color>
+    <color name="gray">#C0C0C0</color>
+    <color name="textGray">#808080</color>
+    <color name="darkgray">#546e7a</color>
+    <color name="textBlack">#222222</color>
+    <color name="textSub">#444444</color>
+    <color name="textLight">#666666</color>
+    <color name="grayBgLt">#999999</color>
+    <color name="WhiteHint">#F9F9F9</color>
+    <color name="RedHint">#FFF6F6</color>
+
+    <color name="palOrange">#fda77f</color>
+    <color name="palLime">#f6ecbf</color>
+    <color name="palGreen">@android:color/holo_green_light</color>
+    <color name="palPink">#f6a7ba</color>
+    <color name="palBlue">#7e0cf5</color>
+
+    <color name="colorLike">#7e0cf5</color>
+</resources>

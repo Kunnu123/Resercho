@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:id="@+id/citebox"
+        android:visibility="gone"
+        android:layout_margin="12dp"
+        android:background="@drawable/small_corner_border"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        android:backgroundTint="@color/colorWhite"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cite this work"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/citationText"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/textGray"
+            android:text="Title : Hotel Management"/>
+
+        <Button
+            android:id="@+id/citeCopy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="end"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:background="@color/WhiteHint"
+            android:text="Copy"/>
+
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@id/openDoc"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="80dp"
+        android:id="@+id/mailay"
+        android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/postImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:src="@drawable/downloading_high"/>
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/video_view"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is the title of the post"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat_bold"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="4dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profileImgLL"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentStart="true"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="0dp"
+                android:elevation="0dp">
+
+                <ImageView
+                    android:id="@+id/userProfPic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tint="@color/gray"
+                    android:src="@drawable/ic_person_black_24dp"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_toEndOf="@id/profileImgLL"
+                android:layout_marginStart="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shanover Saiyed"/>
+
+            <TextView
+                android:id="@+id/uabout"
+                android:layout_toEndOf="@id/profileImgLL"
+                android:layout_below="@id/username"
+                android:layout_marginStart="10dp"
+                android:textSize="10sp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A Computer Engineer at Alpha Coders"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_marginStart="10dp"
+            android:textSize="12sp"
+            android:padding="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/textLight"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A Computer Engineer at Alpha Coders"/>
+
+        <TextView
+            android:id="@+id/attachmentTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone"
+            android:text="Attachments"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/textGray"
+            android:layout_marginTop="6dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/multiRecycler"
+            android:layout_marginStart="10dp"
+            android:visibility="gone"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:paddingStart="22dp"
+            android:paddingEnd="22dp"
+            android:paddingTop="4dp"
+            android:gravity="end"
+            android:paddingBottom="4dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="4dp"
+                android:id="@+id/citeBtn">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:tint="@color/colorPrimary"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_left_quote"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:text="Cite"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="4dp"
+                android:id="@+id/shareBtn">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:tint="@color/colorPrimary"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_share_black_24dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:text="Share"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="4dp"
+                android:id="@+id/saveBtn">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:tint="@color/colorPrimary"
+                    android:padding="2dp"
+                    android:id="@+id/saveIcon"
+                    android:src="@drawable/ic_bookmark_share"/>
+                <TextView
+                    android:id="@+id/saveText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:text="Save"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginStart="4dp"
+                android:id="@+id/downloadBtn">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:tint="@color/colorPrimary"
+                    android:padding="2dp"
+                    android:rotation="180"
+                    android:src="@drawable/ic_file_upload_24dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:text="Download"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/textBlack"
+            android:text="Similar Posts"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/similarRv"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/openDoc"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:background="@drawable/circular_borders"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_margin="8dp"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:text="Open"/>
+</RelativeLayout>

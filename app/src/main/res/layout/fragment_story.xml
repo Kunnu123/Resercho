@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StoryOpener"
+    android:id="@+id/storyLay"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:id="@+id/storyWindow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/storyImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@color/colorTransparent"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="6dp"
+        android:background="@drawable/bg_name_tag"
+        android:layout_below="@id/storyTimer">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profileImgLL"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="23dp"
+            android:padding="0dp">
+            <ImageView
+                android:id="@+id/profImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/collaborate"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/storyUname"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/profileImgLL"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Shanover Saiyed"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/storyTime"
+            android:layout_toEndOf="@id/profileImgLL"
+            android:layout_width="match_parent"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:layout_below="@id/storyUname"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="19 mins ago"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/pbar"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:elevation="4dp"
+        android:indeterminateTint="@color/WhiteHint"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:id="@+id/storyTimer"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:weightSum="500"
+        android:elevation="4dp"
+        android:background="@color/WhiteHint">
+
+        <View
+            android:id="@+id/storyBar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="@color/colorAccent2"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/prevStory"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"/>
+    <View
+        android:id="@+id/nextStory"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true" />
+
+
+
+</RelativeLayout>

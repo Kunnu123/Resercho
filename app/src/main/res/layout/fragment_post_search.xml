@@ -1,0 +1,35 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.resercho.PostSearchFrag">
+
+    <ProgressBar
+        android:id="@+id/pbar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="45dp"
+        android:elevation="8dp"
+        android:layout_height="45dp"/>
+
+    <TextView
+        android:id="@+id/noMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:elevation="10dp"
+        android:textColor="@color/textBlack"
+        android:text="No such posts found!"
+        android:padding="16dp"
+        android:gravity="center"
+        android:fontFamily="@font/noto_sans_reg"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearch"
+        android:layout_below="@id/noMsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

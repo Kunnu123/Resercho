@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/updateBtn">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/keyTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update your"/>
+
+            <EditText
+                android:id="@+id/valTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/small_corner_border"
+                android:padding="10dp"
+                android:layout_marginTop="12dp"
+                android:hint="Enter something"
+                android:textSize="14sp"
+                android:layout_gravity="start|top"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/upbar"
+        android:visibility="gone"
+        android:layout_above="@id/updateBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:gravity="center"
+        android:text="Update"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorWhite"
+        android:layout_margin="16dp"
+        android:background="@drawable/circular_borders"
+        android:backgroundTint="@color/colorPrimary"
+        />
+
+</RelativeLayout>

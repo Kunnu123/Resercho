@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp"
+        android:elevation="2dp"
+        android:src="@drawable/ic_baseline_edit_24_not"
+        android:background="@drawable/circular_borders" />
+    <ImageView
+        android:id="@+id/postImage"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:src="@drawable/downloading"
+        android:scaleType="centerCrop"/>
+</RelativeLayout>
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is the title of the post"
+        android:layout_marginStart="12dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:textSize="14sp"
+        android:background="@drawable/small_corner_border"
+        android:padding="12dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/montserrat_bold"/>
+
+
+
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_marginStart="10dp"
+            android:textSize="12sp"
+            android:background="@drawable/small_corner_border"
+            android:padding="12dp"
+            android:layout_marginEnd="10dp"
+            android:minHeight="80dp"
+            android:gravity="left|start|top"
+            android:textColor="@color/textLight"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A Computer Engineer at Alpha Coders"/>
+
+    <Button
+        android:id="@+id/saveChanges"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:background="@drawable/circular_borders"
+        android:backgroundTint="@color/jungleGreen"
+        android:layout_margin="16dp"
+        android:layout_gravity="end"
+        android:paddingStart="26dp"
+        android:paddingEnd="26dp"
+        android:textSize="14sp"
+        android:textColor="@color/colorWhite"
+        android:text="Save Changes"/>
+
+
+    <Button
+            android:id="@+id/joinBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:background="@drawable/small_corner_border"
+            android:layout_margin="16dp"
+            android:layout_gravity="center"
+            android:paddingStart="26dp"
+            android:paddingEnd="26dp"
+            android:textSize="14sp"
+            android:textColor="@color/textGray"
+            android:text="Delete Group"/>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:paddingStart="26dp"
+        android:paddingEnd="26dp"
+        android:visibility="gone"
+        android:layout_marginStart="4dp"
+        android:id="@+id/shareBtn">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:tint="@color/colorPrimary"
+            android:padding="2dp"
+            android:src="@drawable/ic_share_black_24dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:text="Share"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

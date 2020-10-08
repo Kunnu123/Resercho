@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addNewPostBtnHome"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:tint="@color/colorWhite"
+        android:src="@drawable/ic_edit_black_24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="?actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoryRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_alignParentBottom="true"
+                android:paddingStart="4dp"
+                android:background="@color/colorTransparent"
+                android:clipToPadding="false"
+                android:paddingEnd="4dp"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/workPbar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_margin="8dp"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWork"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:clipToPadding="false"
+            android:background="@color/colorWhite"
+            android:nestedScrollingEnabled="false"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/noGroupMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No posts found!"
+            android:visibility="gone"
+            android:textColor="@color/textGray"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_regular"/>
+
+        <TextView
+            android:id="@+id/loadMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:paddingTop="26dp"
+            android:text="Load More"
+            android:visibility="gone"
+            android:paddingBottom="26dp"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="@color/textGray"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

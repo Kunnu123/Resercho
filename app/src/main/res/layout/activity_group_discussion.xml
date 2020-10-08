@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatWindowActivity"
+    android:background="@color/colorWhite">
+
+    <ProgressBar
+        android:id="@+id/pbar"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:elevation="10dp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_right"
+            android:rotation="180"
+            android:layout_alignParentStart="true"
+            android:padding="10dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profileImgLL"
+            android:layout_width="44dp"
+            android:layout_centerVertical="true"
+            android:layout_height="44dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="2dp"
+            app:cardCornerRadius="23dp"
+            android:backgroundTint="@color/colorWhite"
+            android:padding="0dp"
+            android:layout_toEndOf="@id/backArrow">
+            <ImageView
+                android:id="@+id/headerPic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_person_black_24dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/headerUname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profileImgLL"
+            android:text="Group Name"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorWhite"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_above="@id/senderBox"
+        android:layout_below="@id/headerBar">
+
+        <TextView
+            android:id="@+id/noTextMsg"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:text="No messages"
+            android:layout_gravity="center"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/msgRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/senderBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/small_corner_border"
+        android:backgroundTint="@color/colorWhite"
+        android:elevation="6dp">
+
+        <EditText
+            android:id="@+id/msgContent"
+            android:layout_toStartOf="@id/sendBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:textSize="14sp"
+            android:gravity="start|top"
+            android:textColor="@color/textSub"
+            android:fontFamily="@font/montserrat_regular"
+            android:background="@color/colorWhite"
+            android:hint="Start typing..."
+            android:inputType="textCapSentences|text|textMultiLine"/>
+
+        <ImageView
+            android:id="@+id/sendBtn"
+            android:padding="8dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_arrow_right"
+            android:tint="@color/colorPrimary"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:background="@color/colorWhite"
+    android:padding="14dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/settingsCont">
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:padding="6dp"
+        android:src="@drawable/ic_arrow_right"
+        android:rotation="180"
+        android:tint="@color/textSub"/>
+    <TextView
+        android:id="@+id/settingsLabel"
+        android:layout_toEndOf="@id/backArrow"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:textSize="26sp"
+        android:textColor="@color/textSub"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Settings"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/settingsCont"
+        android:layout_marginTop="26dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select your mode"
+            android:fontFamily="@font/open_sans_light"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/textSub"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mode determines the content you see on this app and provides more relevant information"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/open_sans_light"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/grayBgLt"/>
+
+        <RelativeLayout
+            android:id="@+id/setUnivMode"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/WhiteHint">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="University"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorPrimary"/>
+
+            <ImageView
+                android:id="@+id/univTick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:layout_alignParentEnd="true"
+                android:tint="@color/colorPrimaryDark"
+                android:src="@drawable/ic_check_circle"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/setSchoolMode"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/WhiteHint">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="School Mode"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorPrimary"/>
+
+            <ImageView
+                android:id="@+id/schoolTick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:layout_alignParentEnd="true"
+                android:tint="@color/colorPrimaryDark"
+                android:alpha="0.2"
+                android:src="@drawable/ic_check_circle"/>
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@color/gray"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="26dp"
+            android:layout_marginStart="46dp"
+            android:alpha="0.6"
+            android:layout_marginEnd="46dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

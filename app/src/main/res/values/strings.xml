@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Resercho</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!--    <string name="google_client_id">280485617864-0n4qajmn8692rgr4i5kf1ncn9vtp0k6f.apps.googleusercontent.com</string>-->
+
+    <string name="google_client_id">280485617864-u91rsjm3qksonishp0nnga2ck70pu9ii.apps.googleusercontent.com</string>
+
+    <!--   Activities Strings -->
+    <string name="showcaswork">Showcase Your Work</string>
+    <string name="showcaseworksub">Create exposure for your Academic Work all around the world and get noticed and hired by professionals and companies</string>
+
+    <string name="studymaterials">Study Materials And Notes</string>
+    <string name="studymaterialsub">Get access to study materials and notes for all the subjects for free and upload your own help out other students</string>
+
+    <string name="collaborate">Collaborate</string>
+    <string name="collabsub">No one can achieve anything alone, so team up and collaborate with students and professionals on Independent academic work and projects</string>
+
+    <string name="events">Events</string>
+    <string name="eventsub">See all the educational events happening around you such as meetups, conferences, seminars and admissions</string>
+
+    <string name="groups">Groups</string>
+    <string name="groupsub">Join variety of study groups where you can interact with other people and facilitate discussions</string>
+
+    <string name="upwork">Upload Your Work</string>
+    <string name="upworksub">Instead of your academic work such as assignments, projects, research work and notes going to waste after they have been marked or graded. Upload them on Resercho and get the appreciation that you deserve for your academic work</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="alreadymember">Already a member - Login</string>
+    <string name="newhere">New here? Signup, it\'s free!</string>
+    <string name="deletekey">88f9e03348ef457a9840d861e92b6061783a95febd2bab58fe8ba1c607136d53c6dc0d1aa8757d16184430a55d59de1fa4b0172d1eadf970a5dcd8f762e02420198634f498fa8b0d33c6a78c02575fa1b4ae2133b59b77d4965ea8056a0ce652</string>
+
+</resources>

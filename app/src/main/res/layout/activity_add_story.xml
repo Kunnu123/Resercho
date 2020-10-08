@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStoryActivity">
+    
+    
+    <LinearLayout
+        android:id="@+id/pbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="10dp"
+        android:visibility="gone"
+        android:background="@drawable/small_corner_border"
+        android:backgroundTint="@color/colorWhite"
+        android:padding="20dp"
+        android:layout_centerInParent="true">
+
+        <ProgressBar
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:alpha="0.6"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/textGray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/textGray"
+            android:text="Sending..."/>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_add_black_24dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:elevation="4dp"
+        android:tint="@color/gray"
+        android:alpha="0.3"/>
+
+    <LinearLayout
+        android:id="@+id/storyWindow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/storyImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/colorWhite"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/scaleBtn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:elevation="1dp"
+        android:padding="3dp"
+        android:layout_margin="12dp"
+        android:tint="@color/colorWhite"
+        android:backgroundTint="@color/gray"
+        android:background="@drawable/small_corner_border"
+        android:src="@drawable/ic_image_change24dp"/>
+
+    <Button
+        android:id="@+id/pickBtn"
+        android:layout_width="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_height="45dp"
+        android:textColor="@color/colorWhite"
+        android:text="Pick An Image"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="12dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:background="@drawable/circular_borders"/>
+
+</RelativeLayout>

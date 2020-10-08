@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:background="@color/colorWhite"
+    android:gravity="center_horizontal"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profileImgLL"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="2dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="1dp"
+        android:elevation="1dp"
+        android:backgroundTint="@color/colorWhite"
+        android:padding="0dp">
+        <ImageView
+            android:id="@+id/sugProfImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/downloading"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/sugUname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileImgLL"
+        android:text="User"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:ellipsize="end"
+        android:textColor="@color/textGray"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/noto_sans_reg"/>
+    <TextView
+        android:id="@+id/sugFollowBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileImgLL"
+        android:text="Follow"
+        android:gravity="center"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:maxLines="1"
+        android:layout_marginBottom="6dp"
+        android:textColor="@color/grayBgLt"
+        android:background="@drawable/circular_borders"
+        android:backgroundTint="@color/WhiteSmoke"
+        android:textSize="10sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp" />
+</LinearLayout>

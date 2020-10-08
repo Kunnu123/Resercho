@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/homeComment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        layout="@layout/comment_box"/>
+
+
+    <RelativeLayout
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="3dp"
+        android:padding="1dp"
+        android:layout_height="45dp"
+        android:background="@color/colorTransparent"
+        android:elevation="4dp">
+
+        <EditText
+            android:id="@+id/searchKey"
+            android:layout_toStartOf="@id/searchBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/textBlack"
+            android:inputType="textCapWords"
+            android:textColorHint="@color/textLight"
+            android:textSize="14sp"
+            android:background="@drawable/circular_borders_outlined"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:fontFamily="@font/noto_sans_reg"
+            android:hint="Search"/>
+
+        <ImageButton
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_margin="4dp"
+            android:background="@drawable/circular_borders"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_search_white_24dp"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_below="@id/headerBar"
+        android:layout_width="wrap_content"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/tabs"
+        app:tabTextColor="@color/colorBlack"
+        android:layout_alignParentStart="true"
+        app:tabMode="scrollable"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabPaddingStart="-1dp"
+        app:tabPaddingEnd="-1dp"
+        android:background="@color/colorWhite" />
+
+    <com.resercho.Adapters.CustomViewPager
+        android:layout_below="@id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:id="@+id/homeViewPager"/>
+
+</RelativeLayout>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fillViewport="true">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_alignParentTop="true"
+        android:fitsSystemWindows="true"
+        android:paddingBottom="100dp"
+        android:clipToPadding="false"
+        android:id="@+id/mainLay"
+        android:layout_above="@id/publishBtn"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/mainLays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:padding="8dp"
+                android:textSize="12sp"
+                android:background="@drawable/small_corner_border"
+                android:backgroundTint="@color/WhiteHint"
+                android:text="Attached files cannot be deleted or modified, you need to delete the post if there needs a modification"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:fontFamily="@font/open_sans_light"
+                android:textColor="@color/textBlack"
+                android:text="Upload Cover Picture (Optional)"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/pickCoverBtn"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="8dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="8dp"
+                    android:elevation="2dp"
+                    android:src="@drawable/ic_baseline_edit_24_not"
+                    android:background="@drawable/circular_borders" />
+                <ImageView
+                    android:id="@+id/coverImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_margin="4dp"
+                    android:src="@color/grayBgLt"
+                    android:scaleType="centerCrop"/>
+            </RelativeLayout>
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:padding="8dp"
+                android:textSize="18sp"
+                android:inputType="textCapWords"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="top|start"
+                android:hint="Title"
+                android:background="@color/WhiteHint"
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="130dp"
+                android:layout_margin="2dp"
+                android:padding="8dp"
+                android:inputType="textCapSentences"
+                android:textSize="14sp"
+                android:gravity="top|start"
+                android:hint="Describe this work in few words..."
+                android:background="@drawable/small_corner_border"
+                android:backgroundTint="@color/WhiteHint"/>
+
+            <Spinner
+                android:id="@+id/typeWorkSpinner"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="45dp"/>
+
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="45dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:textSize="14sp"
+                android:inputType="textCapWords"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="top|start"
+                android:hint="Author of this work"
+                android:background="@color/WhiteHint"
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/doi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:textSize="14sp"
+                android:inputType="textCapWords"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="top|start"
+                android:hint="DOI Number (Optional)"
+                android:background="@color/WhiteHint"
+                />
+
+            <TextView
+                android:id="@+id/dop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:inputType="textCapWords"
+                android:visibility="gone"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="top|start"
+                android:hint="Date of Publish"
+                android:background="@color/WhiteHint"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/WhiteHint"
+                android:layout_height="45dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="20dp"
+                android:paddingEnd="4dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Attach Media"
+                    android:fontFamily="@font/open_sans_light"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"/>
+
+
+                <ImageView
+                    android:id="@+id/addDocument"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:tint="@color/colorPrimaryDark"
+                    android:src="@drawable/ic_file"/>
+
+
+                <ImageView
+                    android:id="@+id/addAudio"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:tint="@color/colorPrimaryDark"
+                    android:src="@drawable/ic_desk_microphone"/>
+
+                <ImageView
+                    android:id="@+id/addPhoto"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:tint="@color/colorPrimaryDark"
+                    android:src="@drawable/ic_photo"/>
+
+                <ImageView
+                    android:id="@+id/addVideo"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:tint="@color/colorPrimaryDark"
+                    android:src="@drawable/ic_video_camera"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/multiRecycler"
+                android:layout_marginStart="10dp"
+                android:visibility="gone"
+                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <include
+                android:id="@+id/audioPlayer"
+                android:visibility="gone"
+                layout="@layout/comp_audio_controller"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/imagesRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/documentRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+            <ImageView
+                android:id="@+id/photoView"
+                android:visibility="gone"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:src="@drawable/showcasework"/>
+
+            <VideoView
+                android:id="@+id/videoView"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="160dp" />
+
+
+            <Switch
+                android:id="@+id/enableDownload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="end"
+                android:backgroundTint="@color/WhiteHint"
+                android:layout_margin="4dp"
+                android:text="Allow people to download"
+                android:checked="true"
+                android:textColor="@color/textGray"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:switchPadding="10dp"
+                android:hint="Download"/>
+
+            <Switch
+                android:id="@+id/enableShare"
+                android:layout_width="match_parent"
+                android:gravity="end"
+                android:padding="10dp"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/WhiteHint"
+                android:layout_height="wrap_content"
+                android:text="Allow people to share"
+                android:textSize="14sp"
+                android:checked="true"
+                android:textColor="@color/textGray"
+                android:fontFamily="@font/montserrat_medium"
+                android:switchPadding="10dp"
+                android:hint="Download"/>
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pBar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        />
+    <Button
+        android:id="@+id/publishBtn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Publish"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:elevation="4dp"
+        android:background="@drawable/circular_borders"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

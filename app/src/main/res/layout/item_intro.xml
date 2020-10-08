@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:src="@drawable/studymaterial"
+        android:id="@+id/imageIntro"
+        android:layout_above="@id/slide_heading" />
+
+    <TextView
+        android:id="@+id/slide_heading"
+        android:layout_width="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Heading"
+        android:layout_above="@id/slide_desc"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/textBlack"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/slide_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/open_sans_light"
+        android:contextClickable="false"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="Description"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/textSub"
+        android:textSize="18sp" />
+
+</RelativeLayout>

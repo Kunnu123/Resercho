@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/prof"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="2dp"
+        app:cardCornerRadius="30dp"
+        android:padding="0dp">
+        <ImageView
+            android:id="@+id/profPic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/downloading"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_toEndOf="@id/prof"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:text="Parul Mehta"
+        android:lines="1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:paddingEnd="12dp"
+        android:fontFamily="@font/montserrat_medium"/>
+
+    <TextView
+        android:id="@+id/lastMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:maxLines="1"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_marginTop="6dp"
+        android:textSize="12sp"
+        android:fontFamily="@font/open_sans_light"
+        android:paddingEnd="10dp"
+        android:text="Hey how are you? I had been searching fokadjfbajfbdajhbfiahdbfr you"
+        android:layout_toEndOf="@id/prof"/>
+
+</RelativeLayout>

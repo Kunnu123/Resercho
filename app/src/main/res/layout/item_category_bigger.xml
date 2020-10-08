@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="46dp"
+    android:layout_margin="4dp"
+    android:paddingStart="12dp"
+    android:background="@drawable/small_corner_border"
+    android:backgroundTint="@color/WhiteSmoke"
+    android:elevation="1dp"
+    android:paddingEnd="12dp">
+
+    <TextView
+        android:id="@+id/catName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Science"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/textSub"/>
+
+</RelativeLayout>
