@@ -68,7 +68,8 @@ public class HomeFrag extends Fragment {
     List<ModelStoryV2> storiesList;
     List<ModelSuggested> modelSuggestedList;
 
-    ProgressBar sugPbar, trendPbar, follPbar;
+//    ProgressBar sugPbar, trendPbar, follPbar;
+    ProgressBar sugPbar, follPbar;
 
     View commentBox, noFollowMsg;
 
@@ -187,7 +188,7 @@ public class HomeFrag extends Fragment {
                 if (!recyclerView.canScrollVertically(1)) {
                     if(!loading) {
                         if(followWorkList!=null && followWorkList.size()>0) {
-                            Log.d("Loamore","Fetching more : "+followWorkList.size() );
+                            Log.d("Vertiii","Fetching more : "+followWorkList.size() );
                             loadMoreFollowingPosts(true, followWorkList.get(followWorkList.size() - 1).getId());
                         }
                         else
@@ -255,7 +256,7 @@ public class HomeFrag extends Fragment {
                 NetworkHandler.fetchOffsetFollowing(context,offset,new Callback() {
                     @Override
                     public void onFailure(Call call, IOException e) {
-                        hideView(true,follow?follPbar:trendPbar);
+                        hideView(true,follPbar);
                         if(e.toString().contains("java.net.SocketTimeoutException")){
                             loadTrendingWork(follow);
                         }
@@ -265,7 +266,7 @@ public class HomeFrag extends Fragment {
                     @Override
                     public void onResponse(Call call, Response response) throws IOException {
                         String resp = response.body().string();
-                        hideView(true,follow?follPbar:trendPbar);
+                        hideView(true,follPbar);
 
                         parseFollowJson(resp,true);
 
@@ -284,7 +285,7 @@ public class HomeFrag extends Fragment {
                 NetworkHandler.fetchTrendingWithNewPost(context,pid,new Callback() {
                     @Override
                     public void onFailure(Call call, IOException e) {
-                        hideView(true,follow?follPbar:trendPbar);
+                        hideView(true,follPbar);
                         if(e.toString().contains("java.net.SocketTimeoutException")){
                             loadFollowingWorkWithNewPost(pid);
                         }
@@ -294,7 +295,7 @@ public class HomeFrag extends Fragment {
                     @Override
                     public void onResponse(Call call, Response response) throws IOException {
                         String resp = response.body().string();
-                        hideView(true,follow?follPbar:trendPbar);
+                        hideView(true,follPbar);
                         if(follow)
                             parseFollowJson(resp,false);
 //                        else
@@ -313,7 +314,7 @@ public class HomeFrag extends Fragment {
                 NetworkHandler.fetchTrending(context,follow,null,null,false,new Callback() {
                     @Override
                     public void onFailure(Call call, IOException e) {
-                        hideView(true,follow?follPbar:trendPbar);
+                        hideView(true,follPbar);
                         if(e.toString().contains("java.net.SocketTimeoutException")){
                             loadTrendingWork(follow);
                         }
@@ -323,7 +324,7 @@ public class HomeFrag extends Fragment {
                     @Override
                     public void onResponse(Call call, Response response) throws IOException {
                         String resp = response.body().string();
-                        hideView(true,follow?follPbar:trendPbar);
+                        hideView(true,follPbar);
                         if(follow)
                             parseFollowJson(resp,false);
 //                        else
@@ -418,7 +419,7 @@ public class HomeFrag extends Fragment {
             JSONObject jsonObject =new JSONObject(json);
             if(jsonObject.getInt("success")==1){
                 JSONArray arr = jsonObject.getJSONArray("data");
-                for(int i=0;i<(arr.length()>20?20:arr.length());i++){
+                for(int i=0;i<(arr.length()>30?30:arr.length());i++){
                     ModelWork w = ConverterJson.parseTrendingJson(arr.getJSONObject(i));
                     if(w!=null) {
                         followWorkList.add(w);
@@ -440,9 +441,9 @@ public class HomeFrag extends Fragment {
             }else{
 
                 if(jsonObject.getString("reason").equalsIgnoreCase("no_follower")){
-                    showNoFollow(true,null);
+                    showNoFollow(true,null, loadmore);
                 }else if(jsonObject.getString("reason").equalsIgnoreCase("init")){
-                    showNoFollow(true,"No posts to show, follow more people to get more content");
+                    showNoFollow(true,"No posts to show, follow more people to get more content", loadmore);
                 }
 
             }
@@ -451,11 +452,11 @@ public class HomeFrag extends Fragment {
         }
     }
 
-    protected void showNoFollow(final boolean show, final String msg){
+    protected void showNoFollow(final boolean show, final String msg, final boolean isload){
         ((Activity)context).runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                if(show){
+                if(show && !isload){
                     noFollowMsg.setVisibility(View.VISIBLE);
                     if(msg!=null)
                         ((TextView)noFollowMsg).setText(msg);
